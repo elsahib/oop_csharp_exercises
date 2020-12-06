@@ -4,29 +4,32 @@ namespace TechReturners.Exercises
 {
     public interface ICat
     {
-        String Eat();
-        int AverageHeight();
-        String Setting();
+        String Eat { get; }
+        int AverageHeight { get; }
+        String Setting { get; }
         void GoToSleep();
         void WakeUp();
-        Boolean IsAsleep();
+        Boolean IsAsleep { get; }
 
     }
 
     public class DomesticCat : ICat
     {
-        public Boolean sleepStatus;
-        public String Eat()
+        private Boolean sleepStatus;
+        private String eat = "Purrrrrrr";
+        private int height = 23;
+        private String setting = "domestic";
+        public String Eat
         {
-            return "Purrrrrrr";
+            get { return eat; }
         }
-        public Int32 AverageHeight()
+        public int AverageHeight
         {
-            return 23;
+            get { return height; }
         }
-        public String Setting()
+        public String Setting
         {
-            return "domestic";
+            get { return setting; }
         }
         public void GoToSleep()
         {
@@ -37,25 +40,28 @@ namespace TechReturners.Exercises
             sleepStatus = false;
         }
 
-        public Boolean IsAsleep()
+        public Boolean IsAsleep
         {
-            return sleepStatus;
+            get { return sleepStatus; }
         }
     }
     public class LionCat : ICat
     {
         public Boolean sleepStatus;
-        public String Eat()
+        private String eat = "Roar!!!!";
+        private int height = 1100;
+        private String setting = "wild";
+        public String Eat
         {
-            return "Roar!!!!";
+            get { return eat; }
         }
-        public Int32 AverageHeight()
+        public int AverageHeight
         {
-            return 1100;
+            get { return height; }
         }
-        public String Setting()
+        public String Setting
         {
-            return "wild";
+            get { return setting; }
         }
         public void GoToSleep()
         {
@@ -66,25 +72,29 @@ namespace TechReturners.Exercises
             sleepStatus = false;
         }
 
-        public Boolean IsAsleep()
+        public Boolean IsAsleep
         {
-            return sleepStatus;
+            get { return sleepStatus; }
         }
     }
     public class CheetahCat : ICat
     {
         public Boolean sleepStatus;
-        public String Eat()
+        private String eat = "Zzzzzzz";
+        private int height = 1100;
+        private String setting = "wild";
+
+        public String Eat
         {
-            return "Zzzzzzz";
+            get { return eat; }
         }
-        public Int32 AverageHeight()
+        public int AverageHeight
         {
-            return 1100;
+            get { return height; }
         }
-        public String Setting()
+        public String Setting
         {
-            return "wild";
+            get { return setting; }
         }
         public void GoToSleep()
         {
@@ -94,10 +104,9 @@ namespace TechReturners.Exercises
         {
             sleepStatus = false;
         }
-
-        public Boolean IsAsleep()
+        public Boolean IsAsleep
         {
-            return sleepStatus;
+            get { return sleepStatus; }
         }
     }
 }
